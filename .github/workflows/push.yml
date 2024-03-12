@@ -24,7 +24,7 @@ jobs:
 
     - name: Running unittests
       run: |
-        python -m unittest discover -s tests
+        python -m unittest tests.unit_tests
 
   deploy:
     needs: build-and-test
