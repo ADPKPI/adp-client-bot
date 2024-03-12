@@ -1,5 +1,5 @@
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-from commands import StartCommand, ShowCommand, DetailsCommand, ButtonHandler
+from commands import StartCommand, MenuCommand, DetailsCommand, ButtonHandler
 from db_manager import DBManager
 
 class BotManager:
@@ -11,7 +11,7 @@ class BotManager:
     def _register_handlers(self):
         dispatcher = self.updater.dispatcher
         dispatcher.add_handler(CommandHandler("start", lambda u, c: StartCommand().execute(u, c)))
-        dispatcher.add_handler(CommandHandler("menu", lambda u, c: ShowCommand().execute(u, c)))
+        dispatcher.add_handler(CommandHandler("menu", lambda u, c: MenuCommand().execute(u, c)))
         dispatcher.add_handler(CommandHandler("details", lambda u, c: DetailsCommand().execute(u, c), pass_args=True))
         dispatcher.add_handler(CallbackQueryHandler(lambda u, c: ButtonHandler().execute(u, c)))
 

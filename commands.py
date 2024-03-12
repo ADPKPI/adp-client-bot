@@ -14,7 +14,7 @@ class StartCommand(CommandBase):
             'ви знайдете улюблені смаки та насолоджуватиметесь кожним шматочком! Cмачного! 🍕', parse_mode='HTML')
 
 
-class ShowCommand(CommandBase):
+class MenuCommand(CommandBase):
     def execute(self, update: Update, context: CallbackContext):
         cnx = DBManager.get_connection()
         cursor = cnx.cursor()
