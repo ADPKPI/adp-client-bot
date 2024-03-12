@@ -42,7 +42,6 @@ jobs:
         script: |
           cd /prod/adp-client-bot/
           git pull
-          pkill -f python3
 
     - name: Wait before starting bot
       run: sleep 3
