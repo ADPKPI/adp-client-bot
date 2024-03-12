@@ -54,5 +54,5 @@ jobs:
         username: ${{ secrets.SERVER_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd /prod/
+          cd /prod/adp-client-bot/
           bash start-client-bot.sh
