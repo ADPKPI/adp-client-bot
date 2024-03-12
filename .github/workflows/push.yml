@@ -55,4 +55,4 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /prod/adp-client-bot/
-          bash start-client-bot.sh
+          nohup python3 initialization.py > /dev/null 2>&1 &
