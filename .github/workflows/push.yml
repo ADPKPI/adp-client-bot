@@ -20,7 +20,7 @@ jobs:
     - name: Installing dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install python-dotenv mysql-connector-python python-telegram-bot==13.13
+        pip install python-dotenv mysql-connector-python python-telegram-bot==13.13 prettytable dotenv
 
     - name: Running unittests
       run: |
