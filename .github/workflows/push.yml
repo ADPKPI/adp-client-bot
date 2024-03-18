@@ -27,7 +27,7 @@ jobs:
    #     python -m unittest tests.unit_tests
 
   deploy:
-   # needs: build-and-test
+   #needs: build-and-test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -42,5 +42,3 @@ jobs:
         script: |
           cd /prod/adp-client-bot/
           git pull
-          pkill -f python3
-
